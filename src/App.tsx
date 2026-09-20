@@ -11,6 +11,9 @@ import {
 } from "lucide-react";
 import "./App.css";
 
+const DOWNLOAD_URL =
+  "https://github.com/labhadeom623-sketch/aether-website/releases/latest/download/Aether_1.0.0_x64-setup.exe";
+
 const features = [
   {
     icon: Mic,
@@ -112,7 +115,10 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.24 }}
             >
-              <a className="primary-button" href="#download">
+              <a
+                className="primary-button"
+                href={DOWNLOAD_URL}
+              >
                 <Download size={18} />
                 Download for Windows
                 <ArrowRight size={16} />
@@ -247,7 +253,9 @@ function App() {
 
                 <div>
                   <strong>Command understood</strong>
-                  <span>Opening Chrome and starting your search...</span>
+                  <span>
+                    Opening Chrome and starting your search...
+                  </span>
                 </div>
 
                 <span className="result-time">0.8s</span>
@@ -397,7 +405,10 @@ function App() {
                 little more like yours.
               </p>
 
-              <a className="primary-button download-button" href="#">
+              <a
+                className="primary-button download-button"
+                href={DOWNLOAD_URL}
+              >
                 <Download size={18} />
                 Download Aether
                 <ArrowRight size={16} />
